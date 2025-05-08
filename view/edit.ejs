@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Username</title>
+    <style>
+        form {
+            display: flex;
+            background: rgba(177, 252, 255, 0.774);
+            flex-direction: column;
+            margin: 10px;
+            width: 50%;
+        }
+
+        textarea {
+            min-width: 250px;
+            width: fit-content;
+            margin: 10px 0px 10px 10px;
+        }
+
+        input {
+            min-width: 250px;
+            width: fit-content;
+            margin: 10px 0px 10px 10px;
+        }
+
+        button {
+            min-width: 100px;
+            margin: 10px 0px 10px 10px;
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/user/<%= user.id %>?_method=PATCH" method="post">
+        <h2> You are about to edit this user: <%= user.email %></h2>
+        Username: <textarea name="username"><%= user.username %></textarea>
+        Password: <input type="password" name="password" placeholder="Enter password">
+        <button>Edit</button>
+    </form>
+</body>
+
+</html>

@@ -16,14 +16,14 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/view"));
 
 //fakerjs for creating fake data
-let createRandomUser = () => {
-    return [
-        faker.string.uuid(),
-        faker.internet.username(),
-        faker.internet.email(),
-        faker.internet.password()
-    ];
-};
+// let createRandomUser = () => {
+//     return [
+//         faker.string.uuid(),
+//         faker.internet.username(),
+//         faker.internet.email(),
+//         faker.internet.password()
+//     ];
+// };
 
 const connection = mysql.createConnection({
     host: 'localhost',
